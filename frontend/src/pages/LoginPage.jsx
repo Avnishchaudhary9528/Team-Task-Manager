@@ -81,11 +81,11 @@ export default function LoginPage() {
           <div className="flex gap-2 mb-6">
             <button onClick={() => fillDemo('admin')}
               className="flex-1 py-2 text-xs font-semibold rounded-xl border-2 border-indigo-200 dark:border-indigo-700 text-indigo-600 dark:text-indigo-300 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 transition-colors">
-              Admin Demo
+              Admin 
             </button>
             <button onClick={() => fillDemo('member')}
               className="flex-1 py-2 text-xs font-semibold rounded-xl border-2 border-violet-200 dark:border-violet-700 text-violet-600 dark:text-violet-300 hover:bg-violet-50 dark:hover:bg-violet-900/30 transition-colors">
-              Member Demo
+              Member 
             </button>
           </div>
 
