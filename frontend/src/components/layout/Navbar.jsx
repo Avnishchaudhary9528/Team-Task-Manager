@@ -27,13 +27,15 @@ export default function Navbar({ onMenuClick }) {
           </svg>
         </button>
         <div className="hidden md:block">
-          <h1 className="text-base font-semibold text-gray-900 dark:text-white font-heading">Team Task Manager</h1>
+          <h1 className="text-base font-semibold text-gray-900 dark:text-white font-heading">
+            Team Task Manager{' '}
+            <span className="text-primary-500 text-xs font-normal">by Ethara.AI</span>
+          </h1>
           <p className="text-xs text-gray-500 dark:text-gray-400">Manage your projects and tasks efficiently</p>
         </div>
       </div>
 
       <div className="flex items-center gap-2">
-        {/* Dark mode toggle */}
         <button
           onClick={toggleTheme}
           className="p-2 rounded-lg text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
@@ -50,7 +52,6 @@ export default function Navbar({ onMenuClick }) {
           )}
         </button>
 
-        {/* User menu */}
         <div className="flex items-center gap-3 pl-2 border-l border-gray-200 dark:border-gray-600">
           <div className="hidden md:block text-right">
             <div className="text-sm font-medium text-gray-900 dark:text-white">{user?.name}</div>

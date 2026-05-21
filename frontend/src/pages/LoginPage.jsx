@@ -30,7 +30,7 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen flex bg-gray-50 dark:bg-gray-900">
+    <div className="min-h-screen flex bg-gradient-to-br from-blue-50 via-white to-blue-100 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800">
       {/* Left panel */}
       <div className="hidden lg:flex lg:w-1/2 bg-primary-600 flex-col justify-center items-center p-12 text-white">
         <div className="max-w-md text-center">
@@ -39,7 +39,8 @@ export default function LoginPage() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
             </svg>
           </div>
-          <h1 className="text-4xl font-bold font-heading mb-4">Team Task Manager</h1>
+          <h1 className="text-4xl font-bold font-heading mb-2">Team Task Manager</h1>
+          <p className="text-white/60 text-sm font-medium mb-4 tracking-wide">by Ethara.AI</p>
           <p className="text-primary-100 text-lg leading-relaxed">
             Collaborate smarter. Manage projects, assign tasks, and track progress — all in one place.
           </p>
@@ -62,13 +63,20 @@ export default function LoginPage() {
             <p className="text-gray-500 dark:text-gray-400 mt-2">Sign in to your account to continue</p>
           </div>
 
-          {/* Demo credentials */}
-          <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-6">
-            <p className="text-xs text-blue-700 dark:text-blue-300 font-semibold mb-2">Demo Credentials</p>
-            <div className="flex gap-2">
-              <button onClick={() => fillDemo('admin')} className="text-xs bg-blue-100 dark:bg-blue-800 text-blue-700 dark:text-blue-200 px-2 py-1 rounded hover:bg-blue-200 transition-colors">Admin Login</button>
-              <button onClick={() => fillDemo('member')} className="text-xs bg-blue-100 dark:bg-blue-800 text-blue-700 dark:text-blue-200 px-2 py-1 rounded hover:bg-blue-200 transition-colors">Member Login</button>
-            </div>
+          {/* Demo buttons */}
+          <div className="flex gap-3 mb-6">
+            <button
+              onClick={() => fillDemo('admin')}
+              className="flex-1 text-sm bg-blue-100 dark:bg-blue-800 text-blue-700 dark:text-blue-200 px-4 py-2.5 rounded-lg hover:bg-blue-200 dark:hover:bg-blue-700 transition-colors font-medium border border-blue-200 dark:border-blue-700"
+            >
+              Admin
+            </button>
+            <button
+              onClick={() => fillDemo('member')}
+              className="flex-1 text-sm bg-blue-100 dark:bg-blue-800 text-blue-700 dark:text-blue-200 px-4 py-2.5 rounded-lg hover:bg-blue-200 dark:hover:bg-blue-700 transition-colors font-medium border border-blue-200 dark:border-blue-700"
+            >
+              Member
+            </button>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-4">
