@@ -5,9 +5,12 @@ const { protect } = require('../middleware/auth');
 
 router.use(protect);
 
-router.route('/').get(taskController.getTasks).post(taskController.createTask);
+router.get('/', taskController.getTasks);
+router.post('/', taskController.createTask);
 router.get('/project/:projectId', taskController.getProjectTasks);
-router.route('/:id').get(taskController.getTask).put(taskController.updateTask).delete(taskController.deleteTask);
+router.get('/:id', taskController.getTask);
+router.put('/:id', taskController.updateTask);
+router.delete('/:id', taskController.deleteTask);
 router.post('/:id/comments', taskController.addComment);
 router.delete('/:id/comments/:commentId', taskController.deleteComment);
 
