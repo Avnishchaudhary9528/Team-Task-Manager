@@ -5,7 +5,7 @@ const { protect, adminOnly } = require('../middleware/auth');
 
 router.use(protect);
 
-router.get('/', adminOnly, getUsers);
+router.get('/', getUsers);  // ← adminOnly hata diya, sab authenticated users dekh sakein
 router.get('/:id', getUser);
 router.get('/:id/stats', getUserStats);
 router.put('/:id/role', adminOnly, updateUserRole);
